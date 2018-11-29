@@ -16,7 +16,5 @@ def apuestas(request):
 def contacto(request):
 	return render(request, 'webApp/contact.html')
 
-def servicio(request):
-	return render(request, 'webApp/services.html')
 
 
