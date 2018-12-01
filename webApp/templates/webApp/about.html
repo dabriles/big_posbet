@@ -83,11 +83,11 @@
                         <div class="row">
                             <div class="col">
                                 <div class="home_content">
-                                    <div class="home_title">LIGA ESPAÑOLA</div>
+                                   <!-- <div class="home_title">LIGA ESPAÑOLA</div> -->
                                     <div class="breadcrumbs">
-                                        <ul class="d-flex flex-row align-items-center justify-content-start">
+                                        <!--<ul class="d-flex flex-row align-items-center justify-content-start">
                                             <li><a href="index.html">INICIO</a></li>
-                                            <li>LIGA ESPAÑOLA</li>
+                                            <li>LIGA ESPAÑOLA</li>-->	
                                         </ul>
                                     </div>
                                 </div>
@@ -109,10 +109,19 @@
                                     <p>Acontinuación puede seleccionar cualquier equipo de la Liga Española y de esta manera podrá observar las diferentes estadisticas del equipo.</p>
                                 </div>
                             </div>
-                        </div>
+		
+		<!-- Grafica --> 
+		<script src:"http://cdn.pydata.org/bokeh/release/bokeh-1.0.1.min.js"></script>
+		<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-1.0.1.min.css">
+		{{script_plot_1|safe}}                       
+
+
+			</div>
                     </div>
                 </div>
             </div>
+
+
 
             <!-- Footer -->
 
