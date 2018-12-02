@@ -2,24 +2,7 @@ from django.shortcuts import render
 
 from bokeh.plotting import figure
 from bokeh.embed import components
-import pandas as pd
 
-#datos1=pd.read_csv('/home/dsabrile/proyecto_dip/ciudad_equipos.csv',header=0)
-#print (datos1['Ciudad'])
-
-#def grafica1(request);
-#	datos=pd.read.csv("/home/dsabrile/proyecto_dip")
-
-
-
-
-
-
-
-
-
-
-#
 
 
 # Create your views here.
@@ -27,8 +10,7 @@ def inicio(request):
 	return render(request, 'webApp/index.html')
 
 def liga(request):
-	#return render(request, 'webApp/about.html')
-
+	
 	x = [i for i in range(2016,2020)]
 	y = [6, 10, 17, 21]
 
@@ -53,9 +35,6 @@ def liga(request):
 
 
 def resultados(request):
-	
-
-
 	x = [i for i in range(2016,2020)]
 	y = [6, 10, 17, 21]
 
