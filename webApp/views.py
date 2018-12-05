@@ -21,7 +21,7 @@ def liga(request):
 def resultados(request):
 	parameters = {}
 	parameters.update(plots.plot_rango())
-	#parameters.update(plots.plot_proyeccion())	
+	parameters.update(plots.plot_proyeccion())	
 
 	return render(request, 'webApp/services_1.html', parameters) 
 

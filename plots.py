@@ -3,7 +3,10 @@ from bokeh.embed import components
 from bokeh.core.properties import value
 from bokeh.models import ColumnDataSource
 from bokeh.transform import dodge
-
+import pandas as pd
+from math import pi
+from bokeh.palettes import Category20c
+from bokeh.transform import cumsum
 
 
 # Create your views here.
@@ -89,10 +92,34 @@ def plot_rango():
 	return graphic
 
 
+def plot_proyeccion():
 
+	x = {
+   	 'Equipo1': 157,
+    	 'Equipo2': 93,	
+	}
 
+	data = pd.Series(x).reset_index(name='value').rename(columns={'index':'country'})
+	data['angle'] = data['value']/data['value'].sum() * 2*pi
+		
 
+	data['color'] = ['#6baed6', '#9ecae1']
 
+	plot = figure(plot_height=350, title="Pie Chart", toolbar_location=None,
+           tools="hover", tooltips="@country: @value", x_range=(-0.5, 1.0))
+
+	plot.wedge(x=0, y=1, radius=0.4,
+        start_angle=cumsum('angle', include_zero=True), end_angle=cumsum('angle'),
+        line_color="white", fill_color='color', legend='country', source=data)
+
+	plot.axis.axis_label=None	
+	plot.axis.visible=False
+	plot.grid.grid_line_color = None
+
+	script, div = components(plot)
+	graphic = {"script_proyeccion" : script, "div_proyeccion" : div}
+
+	return graphic
 
 
 
