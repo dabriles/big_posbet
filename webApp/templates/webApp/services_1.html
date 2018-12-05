@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Ultimos Resultados</title>
+        <title>Dashboard</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="Ultimos Resultados template project">
@@ -17,8 +17,10 @@
 	
 	<script src="https://cdn.pydata.org/bokeh/release/bokeh-1.0.2.min.js"></script>
 <link href="https://cdn.pydata.org/bokeh/release/bokeh-1.0.2.min.css"  rel="stylesheet" type="text/css">  
-	{{script_equipo|safe}}     	
-	{{script_jugador|safe}}
+	{{script_rango|safe}}     		
+	
+	<!--{{script_equipo|safe}}     	
+	{{script_jugador|safe}} -->
 
 
 
@@ -117,15 +119,17 @@
                                 <div class="section_text ml-auto mr-auto">
                                     <p>A continuación podrá observar los resultados de los ultimos partidos jugados por los diferentes equipos de la Liga Santander / Española.</p> -->
 
-{{div_equipo|safe}}
-{{div_jugador|safe}}
+<!--{{div_equipo|safe}}
+{{div_jugador|safe}} -->
+{{div_rango|safe}}
 <br>
 
-				{{div_equipo|safe}}
+				<!-- {{div_equipo|safe}}
                                 </div>
                             </div>
 				
-				{{div_jugador|safe}}
+				{{div_jugador|safe}} -->
+				{{div_rango|safe}}
 
 
                         </div>
